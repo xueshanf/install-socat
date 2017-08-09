@@ -6,7 +6,19 @@ This image will install *socat* binary in /opt/bin/socat.d/bin/socat and depende
 
 A wrapper **socat** is installed at /opt/bin. You will need to set kubelete.service environment path to include /opt/bin directory.
 
-Note the Dockerfile doesn't work with dockerhub.com auto-build yet because multi-stage build is not supported by dockerhub.com with docer version 17.03.1.
+```
+$ cd /opt/bin && tree
+.
+├── socat
+└── socat.d
+    ├── bin
+    │   └── socat
+    └── lib
+        ├── libcrypto.so.1.1
+        ├── libreadline.so.7
+        ├── libssl.so.1.1
+        └── libtinfo.so.6
+```
 
 # Usage Examples
 
